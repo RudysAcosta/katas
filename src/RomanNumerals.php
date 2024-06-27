@@ -23,6 +23,10 @@ class RomanNumerals
 
     public static function generate(int $number)
     {
+        if ($number <= 0) {
+            return false;
+        }
+
         $result = '';
 
         foreach (self::NUMERALS as $numeral => $arabic) {
